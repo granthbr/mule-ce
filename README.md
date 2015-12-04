@@ -1,5 +1,5 @@
 # mule community edidtion container
-mule version 3.6 
+Mule Community Edition
 
 To run this with this image with the conf, lib, and app directory:
 
