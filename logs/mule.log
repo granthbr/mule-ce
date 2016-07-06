@@ -1,0 +1,113 @@
+--> Wrapper Started as Console
+Launching a JVM...
+Starting the Mule Container...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+INFO  2016-07-06 11:46:59,667 [WrapperListener_start_runner] org.mule.module.launcher.MuleContainer: 
+**********************************************************************
+* Mule Runtime and Integration Platform                              *
+* Version: 3.8.0 Build: 4afebcb3                                     *
+* MuleSoft, Inc.                                                     *
+* For more information go to http://www.mulesoft.org                 *
+*                                                                    *
+* Server started: 7/6/16 11:46 AM                                    *
+* JDK: 1.7.0_101 (mixed mode)                                        *
+* OS: Linux (4.4.13-moby, amd64)                                     *
+* Host: 48090b6abe7a (172.18.0.4)                                    *
+**********************************************************************
+INFO  2016-07-06 11:46:59,672 [WrapperListener_start_runner] org.mule.module.launcher.coreextension.DefaultMuleCoreExtensionManager: Initializing core extensions
+INFO  2016-07-06 11:46:59,672 [WrapperListener_start_runner] org.mule.module.launcher.coreextension.DefaultMuleCoreExtensionManager: Starting core extensions
+INFO  2016-07-06 11:46:59,691 [WrapperListener_start_runner] org.mule.module.launcher.DefaultArchiveDeployer: ================== New Exploded Artifact: default
+ERROR 2016-07-06 11:46:59,749 [WrapperListener_start_runner] org.mule.module.launcher.DefaultArchiveDeployer: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Failed to deploy exploded artifact: 'default', see below +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+java.lang.IllegalArgumentException: Domain 'default' is not accessible
+	at org.mule.module.launcher.MuleSharedDomainClassLoader.validateAndGetDomainFolders(MuleSharedDomainClassLoader.java:126) ~[mule-module-launcher-3.8.0.jar:3.8.0]
+	at org.mule.module.launcher.MuleSharedDomainClassLoader.<init>(MuleSharedDomainClassLoader.java:52) ~[mule-module-launcher-3.8.0.jar:3.8.0]
+	at org.mule.module.launcher.MuleSharedDomainClassLoader.<init>(MuleSharedDomainClassLoader.java:37) ~[mule-module-launcher-3.8.0.jar:3.8.0]
+	at org.mule.module.launcher.domain.MuleDomainClassLoaderRepository.getDefaultDomainClassLoader(MuleDomainClassLoaderRepository.java:63) ~[mule-module-launcher-3.8.0.jar:3.8.0]
+	at org.mule.module.launcher.domain.MuleDomainClassLoaderRepository.getDomainClassLoader(MuleDomainClassLoaderRepository.java:37) ~[mule-module-launcher-3.8.0.jar:3.8.0]
+	at org.mule.module.launcher.domain.DefaultMuleDomain.refreshClassLoaderAndLoadConfigResourceFile(DefaultMuleDomain.java:69) ~[mule-module-launcher-3.8.0.jar:3.8.0]
+	at org.mule.module.launcher.domain.DefaultMuleDomain.<init>(DefaultMuleDomain.java:65) ~[mule-module-launcher-3.8.0.jar:3.8.0]
+	at org.mule.module.launcher.domain.DefaultDomainFactory.createArtifact(DefaultDomainFactory.java:61) ~[mule-module-launcher-3.8.0.jar:3.8.0]
+	at org.mule.module.launcher.domain.DefaultDomainFactory.createDefaultDomain(DefaultDomainFactory.java:46) ~[mule-module-launcher-3.8.0.jar:3.8.0]
+	at org.mule.module.launcher.application.DefaultApplicationFactory.createAppFrom(DefaultApplicationFactory.java:66) ~[mule-module-launcher-3.8.0.jar:3.8.0]
+	at org.mule.module.launcher.application.DefaultApplicationFactory.createArtifact(DefaultApplicationFactory.java:52) ~[mule-module-launcher-3.8.0.jar:3.8.0]
+	at org.mule.module.launcher.application.DefaultApplicationFactory.createArtifact(DefaultApplicationFactory.java:24) ~[mule-module-launcher-3.8.0.jar:3.8.0]
+	at org.mule.module.launcher.DefaultArchiveDeployer.deployExplodedApp(DefaultArchiveDeployer.java:283) ~[mule-module-launcher-3.8.0.jar:3.8.0]
+	at org.mule.module.launcher.DefaultArchiveDeployer.deployExplodedArtifact(DefaultArchiveDeployer.java:114) ~[mule-module-launcher-3.8.0.jar:3.8.0]
+	at org.mule.module.launcher.DeploymentDirectoryWatcher.deployExplodedApps(DeploymentDirectoryWatcher.java:290) ~[mule-module-launcher-3.8.0.jar:3.8.0]
+	at org.mule.module.launcher.DeploymentDirectoryWatcher.start(DeploymentDirectoryWatcher.java:151) ~[mule-module-launcher-3.8.0.jar:3.8.0]
+	at org.mule.module.launcher.MuleDeploymentService.start(MuleDeploymentService.java:104) ~[mule-module-launcher-3.8.0.jar:3.8.0]
+	at org.mule.module.launcher.MuleContainer.start(MuleContainer.java:170) ~[mule-module-launcher-3.8.0.jar:3.8.0]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.7.0_101]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57) ~[?:1.7.0_101]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.7.0_101]
+	at java.lang.reflect.Method.invoke(Method.java:606) ~[?:1.7.0_101]
+	at org.mule.module.reboot.MuleContainerWrapper.start(MuleContainerWrapper.java:52) ~[mule-module-reboot-3.8.0.jar:3.8.0]
+	at org.tanukisoftware.wrapper.WrapperManager$12.run(WrapperManager.java:2788) ~[wrapper-3.2.3.jar:3.2.3]
+INFO  2016-07-06 11:46:59,754 [WrapperListener_start_runner] org.mule.module.launcher.DeploymentDirectoryWatcher: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Mule is up and kicking (every 5000ms)                    +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ERROR 2016-07-06 11:46:59,771 [WrapperListener_start_runner] org.mule.module.launcher.MuleDeploymentService: java.lang.NullPointerException
+INFO  2016-07-06 11:53:05,374 [Mule.app.deployer.monitor.1.thread.1] org.mule.module.launcher.DefaultArchiveDeployer: ================== New Exploded Artifact: default
+INFO  2016-07-06 11:53:05,375 [Mule.app.deployer.monitor.1.thread.1] org.mule.module.launcher.MuleSharedDomainClassLoader: Using domain dir /opt/mule/domains/default for domain default
+INFO  2016-07-06 11:53:05,441 [Mule.app.deployer.monitor.1.thread.1] org.mule.module.launcher.MuleDeploymentService: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Started domain 'default'                                 +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+--> Wrapper Started as Console
+Launching a JVM...
+Starting the Mule Container...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+INFO  2016-07-06 11:57:18,616 [WrapperListener_start_runner] org.mule.module.launcher.MuleContainer: 
+**********************************************************************
+* Mule Runtime and Integration Platform                              *
+* Version: 3.8.0 Build: 4afebcb3                                     *
+* MuleSoft, Inc.                                                     *
+* For more information go to http://www.mulesoft.org                 *
+*                                                                    *
+* Server started: 7/6/16 11:57 AM                                    *
+* JDK: 1.7.0_101 (mixed mode)                                        *
+* OS: Linux (4.4.13-moby, amd64)                                     *
+* Host: 48090b6abe7a (172.18.0.4)                                    *
+**********************************************************************
+INFO  2016-07-06 11:57:18,621 [WrapperListener_start_runner] org.mule.module.launcher.coreextension.DefaultMuleCoreExtensionManager: Initializing core extensions
+INFO  2016-07-06 11:57:18,621 [WrapperListener_start_runner] org.mule.module.launcher.coreextension.DefaultMuleCoreExtensionManager: Starting core extensions
+INFO  2016-07-06 11:57:18,641 [WrapperListener_start_runner] org.mule.module.launcher.DefaultArchiveDeployer: ================== New Exploded Artifact: default
+INFO  2016-07-06 11:57:18,651 [WrapperListener_start_runner] org.mule.module.launcher.MuleSharedDomainClassLoader: Using domain dir /opt/mule/domains/default for domain default
+INFO  2016-07-06 11:57:18,769 [WrapperListener_start_runner] org.mule.module.launcher.MuleDeploymentService: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Started domain 'default'                                 +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2016-07-06 11:57:18,780 [WrapperListener_start_runner] org.mule.module.launcher.DefaultArchiveDeployer: ================== New Exploded Artifact: default
+INFO  2016-07-06 11:57:18,790 [WrapperListener_start_runner] org.mule.module.launcher.application.DefaultMuleApplication: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ New app 'default'                                        +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2016-07-06 11:57:23,189 [WrapperListener_start_runner] org.mule.module.launcher.MuleDeploymentService: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Started app 'default'                                    +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2016-07-06 11:57:23,195 [WrapperListener_start_runner] org.mule.module.launcher.DeploymentDirectoryWatcher: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Mule is up and kicking (every 5000ms)                    +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2016-07-06 11:57:23,275 [WrapperListener_start_runner] org.mule.module.launcher.StartupSummaryDeploymentListener: 
+**********************************************************************
+*              - - + DOMAIN + - -               * - - + STATUS + - - *
+**********************************************************************
+* default                                       * DEPLOYED           *
+**********************************************************************
+
+*******************************************************************************************************
+*            - - + APPLICATION + - -            *       - - + DOMAIN + - -       * - - + STATUS + - - *
+*******************************************************************************************************
+* default                                       * default                        * DEPLOYED           *
+*******************************************************************************************************
+
